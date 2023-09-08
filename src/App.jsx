@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {ChevronUp} from 'react-feather'
 import{ChevronsUp} from 'react-feather'
 import { RotateCcw } from 'react-feather'
@@ -8,14 +8,15 @@ import {Hash} from 'react-feather'
 import './App.css'
 
 
-function IncreaseCountByOne(){
 
-}
 
 
 
 function App() {
   const [count, setCount] = useState(0);
+  useEffect(()=>{
+    document.title = `Count : ${count}, [count] `
+  });
 
   //increase count by 1
   const increaseCountByOne = () => {
