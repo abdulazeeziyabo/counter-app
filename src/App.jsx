@@ -30,14 +30,14 @@ function App() {
   const resetCountToZero = () => setCount(() => 0)
 
 //set count to random number between 1 and 100
-const countToRandomNumber = () => setCount(() => Math.floor(Math.random() * 101))
+const countToRandomNumber = () => setCount(() => Math.floor(Math.random() * (100-1)+1))
 
 //decrease count by 1
 const decreaseCountByOne = () => {
   setCount((count) => count -= 1)
 }
 //decrease count by 10
-  const decreaseCountByTen = (count) => {
+  const decreaseCountByTen = () => {
     setCount((count) => count -= 10)
   }
 
